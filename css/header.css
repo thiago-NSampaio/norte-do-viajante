@@ -1,15 +1,18 @@
 header {
     width: 100%;
     display: flex;
+    top: 0;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
     padding: 25px 40px;
     background-color: #ffffff;
     color: #333333;
+    z-index: 1;
 }
 
 #tabs-header li a.active{
-    border-bottom: 2px solid #0daf43;
+    border-bottom: 2px solid #109193;
 }
 
 .logo {
@@ -42,6 +45,7 @@ header {
     display: flex;
     align-items: center;
     cursor: pointer;
+    gap: 5px;
 }
 
 .brand-name {
@@ -53,7 +57,7 @@ header {
 }
 
 .brand-name span {
-    color: #0daf43;
+    color: #109193;
     font-weight: 400;
     margin: 0 1px;
 }

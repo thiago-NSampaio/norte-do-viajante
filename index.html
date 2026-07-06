@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon" />
 
     <link rel="stylesheet" href="./css/styles.css" />
     <script defer src="./src/api.js"></script>
@@ -21,28 +22,9 @@
   <body>
     <header>
       <div class="logo-container">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://w3.org"
-          style="margin-right: 8px"
-        >
-          <path
-            d="M12 2L2 22L12 17L22 22L12 2Z"
-            fill="#0b0f19"
-            stroke="#0b0f19"
-            stroke-width="2"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M12 2V17"
-            stroke="#ffffff"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
+        <object type="image/svg+xml" data="./public/favicon.svg" width="30" height="30">
+          <img src="logo.png" alt="Company Logo" />
+        </object>
         <span class="brand-name">norte<span>do</span>viajante</span>
       </div>
       <ul class="header-menu" id="tabs-header">
