@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./src/index.js"></script>
+    <title>Norte do Viajante</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://w3.org"
+          style="margin-right: 8px"
+        >
+          <path
+            d="M12 2L2 22L12 17L22 22L12 2Z"
+            fill="#0b0f19"
+            stroke="#0b0f19"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12 2V17"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span class="brand-name">norte<span>do</span>viajante</span>
+      </div>
+      <ul class="header-menu" id="tabs-header">
+        <li><a data-page="destinos" href="/destinos">Destinos</a></li>
+        <li><a data-page="fichas" href="/fichas">Fichas</a></li>
+        <li><a data-page="sobre" href="/sobre">Sobre</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="hero-container">
+        <div class="hero-intro">
+          Norte do Viajante direciona a criação e curadoria de roteiros
+          inteligentes que guiam sua próxima grande descoberta.
+        </div>
+
+        <div class="hero-center">
+          <h1 class="hero-title" id="tab-title">Encontre a sua Direção</h1>
+          <p class="hero-desc" id="tab-desc">
+            Descubra destinos personalizados mapeados por interesses através de
+            nossa inteligência geográfica. Filtre por gastronomia, cultura ou
+            aventura sem esforço.
+          </p>
+        </div>
+
+        <nav class="nav-menu">
+          <ul id="tabs-menu">
+            <li data-tab="direcao" class="active">Encontre a Sua Direção</li>
+            <li data-tab="fichasInteligentes">Fichas Inteligentes</li>
+            <li data-tab="roteiros">Roteiros Sob Medida</li>
+            <li data-tab="definicao">Alta Definição</li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="page d-none" id="destinos">Destinos</section>
+      <section class="page d-none" id="fichas">Fichas</section>
+      <section class="page d-none" id="sobre">Sobre</section>
+    </main>
+  </body>
+</html>

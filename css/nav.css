@@ -1,0 +1,44 @@
+.nav-menu {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.1px);
+    -webkit-backdrop-filter: blur(2.1px);
+}
+
+.hero-container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.hero-container li:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-container li {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff95;
+    padding: 20px 4rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.hero-container li.active {
+    background-color: #ffffff;
+    color: #222222d3;
+    font-weight: 600;
+    font-size: 16px; 
+    
+    border-radius: 6px; 
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+

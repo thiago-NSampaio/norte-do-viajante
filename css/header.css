@@ -1,0 +1,59 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+#tabs-header li a.active{
+    border-bottom: 2px solid #666666;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -1px;
+    color: #0b0f19;
+}
+
+.header-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header-menu a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 2px 5px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.header-menu a:hover {
+    color: #000000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #0b0f19;
+    text-transform: lowercase;
+}
+
+.brand-name span {
+    color: #0daf43;
+    font-weight: 400;
+    margin: 0 1px;
+}
