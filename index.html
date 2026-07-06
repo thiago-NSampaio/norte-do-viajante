@@ -12,7 +12,10 @@
     />
 
     <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./src/api.js"></script>
     <script defer src="./src/index.js"></script>
+    <script defer src="./src/service.js"></script>
+
     <title>Norte do Viajante</title>
   </head>
   <body>
@@ -75,8 +78,62 @@
         </nav>
       </section>
 
-      <section class="page d-none" id="destinos">Destinos</section>
+      <section class="page d-none" id="destinos">
+        <!-- Barra de Busca Superior -->
+        <div class="destinos-header">
+          <h2>Explore novos horizontes</h2>
+          <div class="search">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Para onde a sua bússola aponta? Ex: Rio de Janeiro..."
+            />
+            <button id="search-button">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="destinos-grid">
+          <div class="destino-card">
+            <div class="card-image-wrapper">
+              <img
+                src="https://unsplash.com"
+                alt="Rio de Janeiro"
+                loading="lazy"
+              />
+              <span class="badge-tag">Popular</span>
+            </div>
+            <div class="card-info">
+              <h3>Rio de Janeiro</h3>
+              <p class="card-country">Brasil</p>
+              <p class="card-text">
+                Famosa por suas praias icônicas, Carnaval vibrante e o majestoso
+                Cristo Redentor.
+              </p>
+              <div class="card-footer">
+                <span class="meta-item">💵 Custo: Médio</span>
+                <span class="meta-item">🛡️ Segurança: Alerta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="page d-none" id="fichas">Fichas</section>
+
       <section class="page d-none" id="sobre">Sobre</section>
     </main>
   </body>

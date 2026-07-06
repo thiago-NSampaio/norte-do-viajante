@@ -1,0 +1,177 @@
+.destinos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.destinos-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 6px 6px 6px 16px;
+    width: 100%;
+    max-width: 500px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search:focus-within {
+    border-color: #0daf43;
+    box-shadow: 0 0 0 3px rgba(13, 175, 67, 0.2);
+}
+
+.search input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b0f19;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search button:hover {
+    background-color: #0daf43;
+    color: #ffffff;
+}
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.destino-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s, border-color 0.3s;
+}
+
+.destino-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.destino-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.badge-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #0daf43;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.card-country {
+    font-size: 12px;
+    color: #0daf43;
+    font-weight: 500;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+/* Rodapé do Card (Metadados da Ficha Técnica) */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 16px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+/* Responsividade de Tela */
+@media (max-width: 768px) {
+    .destinos-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search {
+        max-width: 100%;
+    }
+
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+}
