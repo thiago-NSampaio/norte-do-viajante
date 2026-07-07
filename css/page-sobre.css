@@ -1,0 +1,132 @@
+.sobre-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.sobre-header {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sub-manifesto {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #0daf43;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.sobre-header h2 {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.sobre-manifesto {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 300;
+}
+
+.sobre-manifesto strong {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+.sobre-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 35px 25px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.sobre-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sobre-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.sobre-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 300;
+}
+
+.sobre-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .sobre-container {
+        width: 100%;
+        gap: 35px;
+    }
+
+    .sobre-header h2 {
+        font-size: 32px;
+    }
+
+    .sobre-manifesto {
+        font-size: 14px;
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

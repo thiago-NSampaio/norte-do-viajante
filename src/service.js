@@ -15,7 +15,6 @@ async function carregarFichaComImagem(nomeCidade) {
         <div class="destino-card">
             <div class="card-image-wrapper">
                 <img src="${urlImagemFinal}" alt="${nomeCidade}" loading="lazy">
-                <span class="badge-tag">Explorar</span>
             </div>
             <div class="card-info">
                 <h3>${nomeCidade}</h3>
@@ -43,7 +42,6 @@ async function atualizarGradeDestinos(listaCidades) {
   }
 }
 
-// Vincula os eventos na barra de pesquisa da página
 botaoBusca.addEventListener("click", () => {
   const valor = inputBusca.value.trim();
   if (valor) atualizarGradeDestinos([valor]);
@@ -54,7 +52,6 @@ inputBusca.addEventListener("keypress", (e) => {
   if (e.key === "Enter" && valor) atualizarGradeDestinos([valor]);
 });
 
-// Carga inicial ao abrir o projeto
 document.addEventListener("DOMContentLoaded", () => {
   atualizarGradeDestinos(cidadesIniciais);
 });

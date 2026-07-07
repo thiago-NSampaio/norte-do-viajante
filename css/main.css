@@ -189,4 +189,8 @@
     font-size: 11px;
     flex: 1;
   }
+
+  .page {
+    margin: 20px;
+  }
 }

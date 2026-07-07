@@ -22,14 +22,18 @@
   <body>
     <header>
       <div class="logo-container">
-        <object type="image/svg+xml" data="./public/favicon.svg" width="30" height="30">
-          <img src="logo.png" alt="Company Logo" />
+        <object
+          type="image/svg+xml"
+          data="./public/favicon.svg"
+          width="30"
+          height="30"
+        >
+          <img src="public/logo.png" alt="Company Logo" />
         </object>
         <span class="brand-name">norte<span>do</span>viajante</span>
       </div>
       <ul class="header-menu" id="tabs-header">
         <li><a data-page="destinos" href="/destinos">Destinos</a></li>
-        <li><a data-page="fichas" href="/fichas">Fichas</a></li>
         <li><a data-page="sobre" href="/sobre">Sobre</a></li>
       </ul>
     </header>
@@ -61,7 +65,6 @@
       </section>
 
       <section class="page d-none" id="destinos">
-        <!-- Barra de Busca Superior -->
         <div class="destinos-header">
           <h2>Explore novos horizontes</h2>
           <div class="search">
@@ -88,35 +91,92 @@
           </div>
         </div>
 
-        <div class="destinos-grid">
-          <div class="destino-card">
-            <div class="card-image-wrapper">
-              <img
-                src="https://unsplash.com"
-                alt="Rio de Janeiro"
-                loading="lazy"
-              />
-              <span class="badge-tag">Popular</span>
-            </div>
-            <div class="card-info">
-              <h3>Rio de Janeiro</h3>
-              <p class="card-country">Brasil</p>
-              <p class="card-text">
-                Famosa por suas praias icônicas, Carnaval vibrante e o majestoso
-                Cristo Redentor.
-              </p>
-              <div class="card-footer">
-                <span class="meta-item">💵 Custo: Médio</span>
-                <span class="meta-item">🛡️ Segurança: Alerta</span>
+        <div class="destinos-grid"></div>
+      </section>
+
+      <section class="page d-none" id="sobre">
+        <div class="sobre-container">
+          <div class="sobre-header">
+            <span class="sub-manifesto">Nossa Bússola</span>
+            <h2>Quem Somos</h2>
+            <p class="sobre-manifesto">
+              A <strong>Norte do Viajante</strong> não é apenas uma agência de
+              turismo, mas uma bússola digital. Nascemos da fusão entre a paixão
+              pela exploração global e a precisão da ciência de dados,
+              redesenhando a forma como você descobre, planeja e vivencia novos
+              territórios.
+            </p>
+          </div>
+
+          <div class="sobre-grid">
+            <div class="sobre-card">
+              <div class="card-icon">
+                <object
+                  type="image/svg+xml"
+                  data="./public/icons/compass.svg"
+                  width="40"
+                  height="40"
+                ></object>
               </div>
+              <h3>Direção Inteligente</h3>
+              <p>
+                Apoiamos viajantes indecisos mapeando destinos de forma
+                preditiva com base em interesses culturais, gastronômicos e
+                perfis de orçamento.
+              </p>
+            </div>
+
+            <div class="sobre-card">
+              <div class="card-icon">
+                <object
+                  type="image/svg+xml"
+                  data="./public/icons/graph.svg"
+                  width="40"
+                  height="40"
+                ></object>
+              </div>
+              <h3>Fichas Orientadas a Dados</h3>
+              <p>
+                Acreditamos em viagens sem imprevistos. Consolidamos índices
+                complexos de segurança, custo de vida e comportamento climático
+                em painéis simples e visuais.
+              </p>
+            </div>
+
+            <div class="sobre-card">
+              <div class="card-icon">
+                <object
+                  type="image/svg+xml"
+                  data="./public/icons/camera.svg"
+                  width="40"
+                  height="40"
+                ></object>
+              </div>
+              <h3>Inspiração em Alta Definição</h3>
+              <p>
+                Conectamos nossa plataforma aos maiores bancos de imagens
+                globais para trazer a atmosfera realista das cidades direto para
+                a sua tela antes do embarque.
+              </p>
+            </div>
+          </div>
+
+          <div class="sobre-footer">
+            <div class="stat-item">
+              <div class="stat-number">4M+</div>
+              <div class="stat-label">Cidades Mapeadas</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Processamento Automatizado</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Imprevistos de Rota</div>
             </div>
           </div>
         </div>
       </section>
-
-      <section class="page d-none" id="fichas">Fichas</section>
-
-      <section class="page d-none" id="sobre">Sobre</section>
     </main>
   </body>
 </html>

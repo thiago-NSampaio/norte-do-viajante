@@ -2,6 +2,7 @@
 @import url('main.css');
 @import url('nav.css');
 @import url('page-destinos.css');
+@import url('page-sobre.css');
 
 * {
   margin: 0;
