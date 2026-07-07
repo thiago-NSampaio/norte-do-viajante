@@ -1,11 +1,20 @@
 const UNSPLASH_ACCESS_KEY = "u7ZswoV9WtE4bn1MZHiXtjwAbXI8CKjxSbw9VTEEy8k";
 
+const cache = {};
+
 async function buscarImagemCidade(nomeCidade) {
-  const cidadeNormalizada = nomeCidade.trim();
-  if (!cidadeNormalizada) return null;
+  const formatedCidade = nomeCidade.trim();
+  if (!formatedCidade) return null;
+
+  if (cache[formatedCidade]) {
+    console.log(
+      `[Cache] Retornando imagem de ${nomeCidade} diretamente da memória.`,
+    );
+    return cacheImagensCidades[formatedCidade];
+  }
 
   const url = new URL("https://api.unsplash.com/search/photos");
-  url.searchParams.set("query", cidadeNormalizada);
+  url.searchParams.set("query", formatedCidade);
   url.searchParams.set("orientation", "landscape");
   url.searchParams.set("per_page", "1");
 
