@@ -1,8 +1,41 @@
+@import url('root.css');
 @import url('header.css');
 @import url('main.css');
 @import url('nav.css');
 @import url('page-destinos.css');
 @import url('page-sobre.css');
+
+
+
+.fade-in {
+  animation: fadeIn var(--transition-smooth) var(--ease) both;
+}
+
+.slide-up {
+  animation: slideUp var(--transition-smooth) var(--ease) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
 
 * {
   margin: 0;
@@ -37,7 +70,7 @@ textarea {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;  
+  font-optical-sizing: auto;
   font-style: normal;
   background-color: #0b0f19;
   color: #ffffff;
@@ -48,7 +81,7 @@ body {
   align-items: center;
 }
 
-main{
+main {
   flex: 1;
   display: flex;
   width: 100vw;

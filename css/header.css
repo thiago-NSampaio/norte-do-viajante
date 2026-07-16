@@ -9,6 +9,7 @@ header {
     background-color: #ffffff;
     color: #333333;
     z-index: 1;
+    transition: background-color var(--transition-base) var(--ease), box-shadow var(--transition-base) var(--ease), transform var(--transition-base) var(--ease);
 }
 
 #tabs-header li a.active{
@@ -34,7 +35,7 @@ header {
     font-size: 14px;
     padding: 2px 5px;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color var(--transition-fast) var(--ease), transform var(--transition-fast) var(--ease);
 }
 
 .header-menu a:hover {

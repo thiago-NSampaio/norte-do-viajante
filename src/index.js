@@ -12,22 +12,23 @@ const tabContent = {
   direcao: {
     title: "Encontre a sua Direção",
     desc: "Descubra destinos personalizados mapeados por interesses através de nossa inteligência geográfica. Filtre por gastronomia, cultura ou aventura sem esforço.",
-    backgroundURL: '../public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.jpg'
+    backgroundURL:
+      "../public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.jpg",
   },
   fichasInteligentes: {
     title: "Fichas Inteligentes",
     desc: "Consulte índices integrados de custo de vida, clima histórico e dados de segurança em tempo real antes mesmo de preparar as suas malas.",
-    backgroundURL: '../public/stats-cities.jpg'
+    backgroundURL: "../public/stats-cities.jpg",
   },
   roteiros: {
     title: "Roteiros Sob Medida",
     desc: "Trabalhe em conjunto com nossos especialistas para consolidar suas cidades favoritas em um itinerário de viagem inteligente e otimizado.",
-    backgroundURL: '../public/glenn-carstens-peters.jpg'
+    backgroundURL: "../public/glenn-carstens-peters.jpg",
   },
   definicao: {
     title: "Alta Definição",
     desc: "Explore galerias urbanas imersivas alimentadas por fotógrafos globais. Inspire-se visualmente com a arquitetura e os cenários do seu próximo destino.",
-    backgroundURL: '../public/anastase-maragos.jpg'
+    backgroundURL: "../public/anastase-maragos.jpg",
   },
 };
 
@@ -82,7 +83,10 @@ function updateTabContent(tabKey) {
   setTimeout(() => {
     titleEl.textContent = tabContent[tabKey].title;
     descEl.textContent = tabContent[tabKey].desc;
-    hero.style.setProperty('--hero-bg-url', `url('${tabContent[tabKey].backgroundURL}')`);
+    hero.style.setProperty(
+      "--hero-bg-url",
+      `url('${tabContent[tabKey].backgroundURL}')`,
+    );
 
     titleEl.classList.remove("fade-out");
     descEl.classList.remove("fade-out");

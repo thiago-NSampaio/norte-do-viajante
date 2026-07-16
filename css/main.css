@@ -1,5 +1,5 @@
 .hero-container {
-  --hero-bg-url: url("../public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.jpg");
+  --hero-bg-url: url(../public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.jpg);
   flex: 1;
   width: calc(100% - 80px);
   margin: 40px;
@@ -18,6 +18,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: heroBackground 18s ease-in-out infinite alternate;
 }
 
 .hero-intro {
@@ -44,6 +45,9 @@
   line-height: 0.95;
   letter-spacing: -2px;
   margin-bottom: 35px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: slideUp 600ms var(--ease) forwards;
 }
 
 .hero-desc {
@@ -197,3 +201,27 @@
     width: 100%;
   }
 }
+
+@keyframes heroBackground {
+  0% { background-position: center 30%; }
+  50% { background-position: center 50%; }
+  100% { background-position: center 70%; }
+}
+
+.hero-intro, .hero-desc {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeIn 480ms var(--ease) forwards;
+}
+
+/* Staggered animations for hero elements */
+.hero-intro{animation-delay:120ms}
+.hero-title{animation-delay:80ms}
+.hero-desc{animation-delay:160ms}
+
+/* Cards and images */
+.image-zoom{transition: transform var(--transition-base) var(--ease);}
+.image-zoom:hover{transform:scale(1.03)}
+
+.section{opacity:0;transform:translateY(16px);transition:opacity var(--transition-base) var(--ease),transform var(--transition-base) var(--ease)}
+.section.is-visible{opacity:1;transform:none}
