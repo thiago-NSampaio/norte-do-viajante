@@ -28,7 +28,7 @@
           width="30"
           height="30"
         >
-          <img src="public/logo.png" alt="Company Logo" />
+          <img src="public/logo.webp" alt="Company Logo" />
         </object>
         <span class="brand-name">norte<span>do</span>viajante</span>
       </div>
@@ -41,6 +41,20 @@
 
     <main>
       <section class="hero-container">
+        <!-- Camadas de fundo para crossfade suave -->
+        <div class="hero-bg-layers">
+          <div
+            class="hero-bg-layer active"
+            id="hero-bg-1"
+            style="
+              background-image:
+                linear-gradient(to bottom, rgba(11, 15, 25, 0.5) 100%),
+                url(&quot;./public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.webp&quot;);
+            "
+          ></div>
+          <div class="hero-bg-layer" id="hero-bg-2"></div>
+        </div>
+
         <div class="hero-intro">
           Norte do Viajante direciona a criação e curadoria de roteiros
           inteligentes que guiam sua próxima grande descoberta.

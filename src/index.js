@@ -13,24 +13,33 @@ const tabContent = {
     title: "Encontre a sua Direção",
     desc: "Descubra destinos personalizados mapeados por interesses através de nossa inteligência geográfica. Filtre por gastronomia, cultura ou aventura sem esforço.",
     backgroundURL:
-      "../public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.jpg",
+      "./public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.webp",
   },
   fichasInteligentes: {
     title: "Fichas Inteligentes",
     desc: "Consulte índices integrados de custo de vida, clima histórico e dados de segurança em tempo real antes mesmo de preparar as suas malas.",
-    backgroundURL: "../public/stats-cities.jpg",
+    backgroundURL: "./public/stats-cities.webp",
   },
   roteiros: {
     title: "Roteiros Sob Medida",
     desc: "Trabalhe em conjunto com nossos especialistas para consolidar suas cidades favoritas em um itinerário de viagem inteligente e otimizado.",
-    backgroundURL: "../public/glenn-carstens-peters.jpg",
+    backgroundURL: "./public/glenn-carstens-peters.webp",
   },
   definicao: {
     title: "Alta Definição",
     desc: "Explore galerias urbanas imersivas alimentadas por fotógrafos globais. Inspire-se visualmente com a arquitetura e os cenários do seu próximo destino.",
-    backgroundURL: "../public/anastase-maragos.jpg",
+    backgroundURL: "./public/anastase-maragos.webp",
   },
 };
+
+const bgLayer1 = document.getElementById("hero-bg-1");
+const bgLayer2 = document.getElementById("hero-bg-2");
+let activeBgLayer = 1;
+
+Object.values(tabContent).forEach((tab) => {
+  const img = new Image();
+  img.src = tab.backgroundURL;
+});
 
 logo.addEventListener("click", (e) => {
   e.preventDefault();
@@ -83,10 +92,19 @@ function updateTabContent(tabKey) {
   setTimeout(() => {
     titleEl.textContent = tabContent[tabKey].title;
     descEl.textContent = tabContent[tabKey].desc;
-    hero.style.setProperty(
-      "--hero-bg-url",
-      `url('${tabContent[tabKey].backgroundURL}')`,
-    );
+
+    const nextBgStyle = `linear-gradient(to bottom, rgba(11, 15, 25, 0.5) 100%), url('${tabContent[tabKey].backgroundURL}')`;
+    if (activeBgLayer === 1) {
+      bgLayer2.style.backgroundImage = nextBgStyle;
+      bgLayer2.classList.add("active");
+      bgLayer1.classList.remove("active");
+      activeBgLayer = 2;
+    } else {
+      bgLayer1.style.backgroundImage = nextBgStyle;
+      bgLayer1.classList.add("active");
+      bgLayer2.classList.remove("active");
+      activeBgLayer = 1;
+    }
 
     titleEl.classList.remove("fade-out");
     descEl.classList.remove("fade-out");

@@ -6,12 +6,7 @@ async function buscarImagemCidade(nomeCidade) {
   const formatedCidade = nomeCidade.trim();
   if (!formatedCidade) return null;
 
-  console.log(cache);
-
   if (cache[formatedCidade]) {
-    console.log(
-      `[Cache] Retornando imagem de ${nomeCidade} diretamente da memória.`,
-    );
     return cache[formatedCidade];
   }
 
