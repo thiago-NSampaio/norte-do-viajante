@@ -1,5 +1,3 @@
-const UNSPLASH_ACCESS_KEY = "u7ZswoV9WtE4bn1MZHiXtjwAbXI8CKjxSbw9VTEEy8k";
-
 const cache = {};
 
 async function buscarImagemCidade(nomeCidade) {
@@ -10,17 +8,13 @@ async function buscarImagemCidade(nomeCidade) {
     return cache[formatedCidade];
   }
 
-  const url = new URL("https://api.unsplash.com/search/photos");
+  const url = new URL("/.netlify/functions/search-img", window.location.origin);
   url.searchParams.set("query", formatedCidade);
   url.searchParams.set("orientation", "landscape");
   url.searchParams.set("per_page", "6");
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
-      },
-    });
+    const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error("Falha ao conectar com o serviço de imagens.");
@@ -42,7 +36,7 @@ async function buscarImagemCidade(nomeCidade) {
 
     return null;
   } catch (error) {
-    console.error("Erro na API Unsplash:", error);
+    console.error("Erro na API Unsplash via Netlify Function:", error);
     return null;
   }
 }
