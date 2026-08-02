@@ -1,197 +1,161 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script defer src="./src/api.js"></script>
-    <script defer src="./src/index.js"></script>
-    <script defer src="./src/service.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./public/favicon.svg" type="image/x-icon" />
 
-    <title>Norte do Viajante</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo-container">
-        <object
-          type="image/svg+xml"
-          data="./public/favicon.svg"
-          width="30"
-          height="30"
-        >
-          <img src="public/logo.webp" alt="Company Logo" />
-        </object>
-        <span class="brand-name">norte<span>do</span>viajante</span>
-      </div>
-      <ul class="header-menu" id="tabs-header">
-        <li><a data-page="home" href="/home">Início</a></li>
-        <li><a data-page="destinos" href="/destinos">Destinos</a></li>
-        <li><a data-page="sobre" href="/sobre">Sobre</a></li>
-      </ul>
-    </header>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script defer src="./src/api.js"></script>
+  <script defer src="./src/index.js"></script>
+  <script defer src="./src/service.js"></script>
 
-    <main>
-      <section class="hero-container">
-        <!-- Camadas de fundo para crossfade suave -->
-        <div class="hero-bg-layers">
-          <div
-            class="hero-bg-layer active"
-            id="hero-bg-1"
-            style="
+  <title>Norte do Viajante</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <object type="image/svg+xml" data="./public/favicon.svg" width="30" height="30">
+        <img src="public/logo.webp" alt="Company Logo" />
+      </object>
+      <span class="brand-name">norte<span>do</span>viajante</span>
+    </div>
+    <ul class="header-menu" id="tabs-header">
+      <li><a data-page="home" href="/home">Início</a></li>
+      <li><a data-page="destinos" href="/destinos">Destinos</a></li>
+      <li><a data-page="sobre" href="/sobre">Sobre</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="hero-container">
+      <div class="hero-bg-layers">
+        <div class="hero-bg-layer active" id="hero-bg-1" style="
               background-image:
                 linear-gradient(to bottom, rgba(11, 15, 25, 0.5) 100%),
                 url(&quot;./public/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime.webp&quot;);
-            "
-          ></div>
-          <div class="hero-bg-layer" id="hero-bg-2"></div>
-        </div>
+            "></div>
+        <div class="hero-bg-layer" id="hero-bg-2"></div>
+      </div>
 
-        <div class="hero-intro">
-          Norte do Viajante direciona a criação e curadoria de roteiros
-          inteligentes que guiam sua próxima grande descoberta.
-        </div>
+      <div class="hero-intro">
+        Norte do Viajante direciona a criação e curadoria de roteiros
+        inteligentes que guiam sua próxima grande descoberta.
+      </div>
 
-        <div class="hero-center">
-          <h1 class="hero-title" id="tab-title">Encontre a sua Direção</h1>
-          <p class="hero-desc" id="tab-desc">
-            Descubra destinos personalizados mapeados por interesses através de
-            nossa inteligência geográfica. Filtre por gastronomia, cultura ou
-            aventura sem esforço.
+      <div class="hero-center">
+        <h1 class="hero-title" id="tab-title">Encontre a sua Direção</h1>
+        <p class="hero-desc" id="tab-desc">
+          Descubra destinos personalizados mapeados por interesses através de
+          nossa inteligência geográfica. Filtre por gastronomia, cultura ou
+          aventura sem esforço.
+        </p>
+      </div>
+
+      <nav class="nav-menu">
+        <ul id="tabs-menu">
+          <li data-tab="direcao" class="active">Encontre a Sua Direção</li>
+          <li data-tab="fichasInteligentes">Fichas Inteligentes</li>
+          <li data-tab="roteiros">Roteiros Sob Medida</li>
+          <li data-tab="definicao">Alta Definição</li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="page d-none" id="destinos">
+      <div class="destinos-header">
+        <h2>Explore novos horizontes</h2>
+        <div class="search">
+          <input type="text" id="search-input" placeholder="Para onde a sua bússola aponta? Ex: Manaus..." />
+          <button id="search-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="destinos-grid"></div>
+    </section>
+
+    <section class="page d-none" id="sobre">
+      <div class="sobre-container">
+        <div class="sobre-header">
+          <span class="sub-manifesto">Nossa Bússola</span>
+          <h2>Quem Somos</h2>
+          <p class="sobre-manifesto">
+            A <strong>Norte do Viajante</strong> não é apenas uma agência de
+            turismo, mas uma bússola digital. Nascemos da fusão entre a paixão
+            pela exploração global e a precisão da ciência de dados,
+            redesenhando a forma como você descobre, planeja e vivencia novos
+            territórios.
           </p>
         </div>
 
-        <nav class="nav-menu">
-          <ul id="tabs-menu">
-            <li data-tab="direcao" class="active">Encontre a Sua Direção</li>
-            <li data-tab="fichasInteligentes">Fichas Inteligentes</li>
-            <li data-tab="roteiros">Roteiros Sob Medida</li>
-            <li data-tab="definicao">Alta Definição</li>
-          </ul>
-        </nav>
-      </section>
-
-      <section class="page d-none" id="destinos">
-        <div class="destinos-header">
-          <h2>Explore novos horizontes</h2>
-          <div class="search">
-            <input
-              type="text"
-              id="search-input"
-              placeholder="Para onde a sua bússola aponta? Ex: Manaus..."
-            />
-            <button id="search-button">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#fff"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="destinos-grid"></div>
-      </section>
-
-      <section class="page d-none" id="sobre">
-        <div class="sobre-container">
-          <div class="sobre-header">
-            <span class="sub-manifesto">Nossa Bússola</span>
-            <h2>Quem Somos</h2>
-            <p class="sobre-manifesto">
-              A <strong>Norte do Viajante</strong> não é apenas uma agência de
-              turismo, mas uma bússola digital. Nascemos da fusão entre a paixão
-              pela exploração global e a precisão da ciência de dados,
-              redesenhando a forma como você descobre, planeja e vivencia novos
-              territórios.
+        <div class="sobre-grid">
+          <div class="sobre-card">
+            <div class="card-icon">
+              <object type="image/svg+xml" data="./public/icons/compass.svg" width="40" height="40"></object>
+            </div>
+            <h3>Direção Inteligente</h3>
+            <p>
+              Apoiamos viajantes indecisos mapeando destinos de forma
+              preditiva com base em interesses culturais, gastronômicos e
+              perfis de orçamento.
             </p>
           </div>
 
-          <div class="sobre-grid">
-            <div class="sobre-card">
-              <div class="card-icon">
-                <object
-                  type="image/svg+xml"
-                  data="./public/icons/compass.svg"
-                  width="40"
-                  height="40"
-                ></object>
-              </div>
-              <h3>Direção Inteligente</h3>
-              <p>
-                Apoiamos viajantes indecisos mapeando destinos de forma
-                preditiva com base em interesses culturais, gastronômicos e
-                perfis de orçamento.
-              </p>
+          <div class="sobre-card">
+            <div class="card-icon">
+              <object type="image/svg+xml" data="./public/icons/graph.svg" width="40" height="40"></object>
             </div>
-
-            <div class="sobre-card">
-              <div class="card-icon">
-                <object
-                  type="image/svg+xml"
-                  data="./public/icons/graph.svg"
-                  width="40"
-                  height="40"
-                ></object>
-              </div>
-              <h3>Fichas Orientadas a Dados</h3>
-              <p>
-                Acreditamos em viagens sem imprevistos. Consolidamos índices
-                complexos de segurança, custo de vida e comportamento climático
-                em painéis simples e visuais.
-              </p>
-            </div>
-
-            <div class="sobre-card">
-              <div class="card-icon">
-                <object
-                  type="image/svg+xml"
-                  data="./public/icons/camera.svg"
-                  width="40"
-                  height="40"
-                ></object>
-              </div>
-              <h3>Inspiração em Alta Definição</h3>
-              <p>
-                Conectamos nossa plataforma aos maiores bancos de imagens
-                globais para trazer a atmosfera realista das cidades direto para
-                a sua tela antes do embarque.
-              </p>
-            </div>
+            <h3>Fichas Orientadas a Dados</h3>
+            <p>
+              Acreditamos em viagens sem imprevistos. Consolidamos índices
+              complexos de segurança, custo de vida e comportamento climático
+              em painéis simples e visuais.
+            </p>
           </div>
 
-          <div class="sobre-footer">
-            <div class="stat-item">
-              <div class="stat-number">4M+</div>
-              <div class="stat-label">Cidades Mapeadas</div>
+          <div class="sobre-card">
+            <div class="card-icon">
+              <object type="image/svg+xml" data="./public/icons/camera.svg" width="40" height="40"></object>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Processamento Automatizado</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">0</div>
-              <div class="stat-label">Imprevistos de Rota</div>
-            </div>
+            <h3>Inspiração em Alta Definição</h3>
+            <p>
+              Conectamos nossa plataforma aos maiores bancos de imagens
+              globais para trazer a atmosfera realista das cidades direto para
+              a sua tela antes do embarque.
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
+
+        <div class="sobre-footer">
+          <div class="stat-item">
+            <div class="stat-number">4M+</div>
+            <div class="stat-label">Cidades Mapeadas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Processamento Automatizado</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Imprevistos de Rota</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
